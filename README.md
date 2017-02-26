@@ -10,7 +10,7 @@ A: *Naked twins strategy is just another constraint that is applied to the sudok
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
 A: *Diagonal sudoku problem is no different from how constraint propagation is used in the original problem.
     This problem only differs in how the problem units are constructed. In this case there's an addition of 2 diagonal units
-    Adding diagonal units did not warrant any changes to how constraint propagation is applied*
+    Adding diagonal units did not warrant any changes to how constraint propagation is applied.*
 
 ### Install
 
