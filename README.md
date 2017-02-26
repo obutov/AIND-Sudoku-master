@@ -4,13 +4,13 @@
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
 A: *Naked twins strategy is just another constraint that is applied to the sudoku grid in order to reduce the solution space.
-    In this specific instance, naked twin strategy is executed after executing elimination constraint and before calling only choice constraint.*
+    In this specific instance, "naked twin" strategy is executed after "only choice" strategy.*
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Diagonal sudoku problem is no different in how we use constraint propagation from the original problem
+A: *Diagonal sudoku problem is no different from how constraint propagation is used in the original problem.
     This problem only differs in how the problem units are constructed. In this case there's an addition of 2 diagonal units
-    Adding diagonal units did not warrant any changes to how constraint propagation is used*
+    Adding diagonal units did not warrant any changes to how constraint propagation is applied*
 
 ### Install
 
