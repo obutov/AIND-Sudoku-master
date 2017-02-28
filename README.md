@@ -4,13 +4,19 @@
 # Question 1 (Naked Twins)
 Q: How do we use constraint propagation to solve the naked twins problem?  
 A: *Naked twins strategy is just another constraint that is applied to the sudoku grid in order to reduce the solution space.
-    In this specific instance, "naked twin" strategy is executed after "only choice" strategy.*
+    The strategy examines all available units (vertical, horizontal, squares) and tries to identify any tiwn boxes in the unit,
+    e.g. any boxes with identical two digit values. Since the twin boxes have no other possibilities but the two values assigned to them,
+    we can eliminate these values from all other boxes. For example, if we find twin boxes with values 2 and 3 in a square unit, 
+    we'll assume that no other boxes in this unit can take on values of either 2 or 3, thus 2 and 3 can be removed from all other squares in this unit.
+    In this specific instance, "naked twin" strategy is executed after "only choice" strategy, e.g. after the solution space has already been reduced by "elimination" and "only choice" constraint.*
 
 # Question 2 (Diagonal Sudoku)
 Q: How do we use constraint propagation to solve the diagonal sudoku problem?  
-A: *Diagonal sudoku problem is no different from how constraint propagation is used in the original problem.
-    This problem only differs in how the problem units are constructed. In this case there's an addition of 2 diagonal units
-    Adding diagonal units did not warrant any changes to how constraint propagation is applied.*
+A: *Diagonal sudoku problem is no different from how constraint propagation is used for the original problem.
+    This problem only differs in how the problem units are constructed. In this case there's an addition of 2 diagonal units.
+    Each constrain is applied to each unit, including the additional diagonal units. First "elimination" constraint is applied to all units 
+    (vertical, horizontal, squares, diagonals), then "only choice" constraint is applied and then "naked twins" is applied to all of the units.
+    Moreover, adding diagonal units did not warrant any changes to how constraint propagation is applied.*
 
 ### Install
 
